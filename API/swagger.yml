@@ -1,0 +1,224 @@
+swagger: "2.0"
+info:
+  description: This is the swagger file that goes with the server code
+  version: "1.0.0"
+  title: Swagger REST Behaviour-Simulation API 
+consumes:
+  - application/json
+produces:
+  - application/json
+
+basePath: /api
+
+# Paths supported by the server application
+paths:
+  /profiles:
+    get:
+      operationId: profiles.read_all
+      tags:
+        - Profiles
+      summary: Read the entire list of profiles
+      description: Read the entire list of profiles
+      responses:
+        200:
+          description: Successfully read profile list operation
+          schema:
+            type: array
+            items:
+              properties:
+                profile_name:
+                  type: string
+                status:
+                  type: string
+                duration:
+                  type: string
+                time_remaining:
+                  type: string  
+                started_running:
+                  type: string
+                request_body:
+                  type: object 
+                persona:
+                  properties:
+                    status:
+                      type: string
+                asklipios_LIS:
+                  properties:
+                    status:
+                      type: string  
+                applications:
+                  properties:
+                    status:
+                      type: string
+
+  /profiles/{profile_name}:
+    get:
+      operationId: profiles.read_profile
+      tags:
+        - Profiles
+      summary: Read one profile
+      description: "Available profiles to select from:
+                    {
+                      Custom_Profile,
+                      Quick_Profile
+                    }"
+      parameters:
+        - name: profile_name
+          in: path
+          type: string
+          description: Name of the profile
+          required: true
+      responses:
+        200:
+          description: Successfully read profile operation
+          schema:
+            type: object
+            properties:
+              profile_name:
+                type: string
+              status:
+                type: string
+              duration:
+                type: string
+              time_remaining:
+                type: string
+              started_running:
+                type: string
+              request_body:
+                type: object  
+              persona:
+                properties:
+                  status:
+                    type: string
+              asklipios_LIS:
+                properties:
+                  status:
+                    type: string
+              applications:
+                properties:
+                  status:
+                    type: string
+
+        404:
+          description: Profile not found
+
+  /profiles/start_custom_profile:
+    post:
+      operationId: profiles.start_custom_profile
+      tags:
+        - Profiles
+      summary: Start the custom profile
+      description: "Available profiles to select from:
+                    {
+                      Custom_Profile
+                    }"
+      parameters:
+        - name: body
+          in: body
+          description: Applications to be started
+          schema:
+            type: object
+            required: ["total_duration"]
+            properties:
+              total_duration:
+                type: integer
+              aklipios_LIS:
+                type: object
+                properties:
+                  enabled:
+                    type: boolean
+              persona:
+                type: object
+                properties:
+                  enabled:
+                    type: boolean
+              apps:
+                type: object
+                properties:
+                  google:
+                    $ref: '#/definitions/Application'
+                  youtube:
+                    $ref: '#/definitions/Application'
+                  facebook:
+                    $ref: '#/definitions/Application'
+                  outlook:
+                    $ref: '#/definitions/Application'
+                  promitheus:
+                    $ref: '#/definitions/Application'
+                  galinos:
+                    $ref: '#/definitions/Application'
+                  apografi_http:
+                    $ref: '#/definitions/Application'
+                  gsis:
+                    $ref: '#/definitions/Application'
+                  idika:
+                    $ref: '#/definitions/Application'
+                  ebaby:
+                    $ref: '#/definitions/Application'
+                  eopyy:
+                    $ref: '#/definitions/Application'
+                  e_prescription:
+                    $ref: '#/definitions/Application'
+                  diavgeia:
+                    $ref: '#/definitions/Application'
+                  e_services:
+                    $ref: '#/definitions/Application'
+                  dypethessaly:
+                    $ref: '#/definitions/Application'
+      responses:
+        200:
+          description: Successfully created profile
+        400:
+          description: Profile already running
+        500:
+          description: Profile coudn't start
+
+  /profiles/start_quick_profile:
+    get:
+      operationId: profiles.start_quick_profile
+      tags:
+        - Profiles
+      summary: Start the quick profile
+      description: "Available profiles to select from:
+                    {
+                      Quick_Profile
+                    }"
+      responses:
+        200:
+          description: Successfully created profile
+        400:
+          description: Profile already running
+        500:
+          description: Profile coudn't start
+
+  /profiles/{profile_name}/stop:
+    get:
+      operationId: profiles.stop_profile
+      tags:
+        - Profiles
+      summary: Stop a profile
+      description: "Available profiles to select from:
+                    {
+                      Custom_Profile,
+                      Quick_Profile
+                    }"
+      parameters:
+        - name: profile_name
+          in: path
+          description: Name of the profile to be started
+          type: string
+          required: True
+      responses:
+        200:
+          description: Successfully stopped profile
+        400:
+          description: Profile already stopped or doesn't exist.
+
+definitions:
+  Application:
+    type: object
+    properties:
+      interarrivals_list:
+        type: string
+      duration_list:
+        type: string

@@ -1,0 +1,8 @@
+requests==2.18.4
+connexion==2.7.0
+selenium==3.141.0
+numpy==1.18.5
+Flask==1.1.2
+psutil
+python-dotenv==0.19.0
+connexion[swagger-ui]

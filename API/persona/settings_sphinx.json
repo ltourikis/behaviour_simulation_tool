@@ -1,0 +1,6 @@
+{
+  "host": "http://sphinx.epu.ntua.gr/",
+  "loginSuffix" : "rest-auth/login/",
+  "registrationSuffix": "rest-auth/registration/",
+  "userDataSuffix" : "user/data"
+}
