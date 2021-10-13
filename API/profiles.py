@@ -204,9 +204,14 @@ def terminate_all_processes(profile_name):
         else:
             logging.info("(persona)Operating System Windows detected")
 
-        for file in glob.glob('persona/sphinxuser_*.json'):
-            if file != 'persona/sphinxuser_0000.json':
-                os.remove(file)
+        if "Linux" in platform.platform():
+            for file in glob.glob('persona/sphinxuser_*.json'):
+                if file != 'persona/sphinxuser_0000.json':
+                    os.remove(file)
+        else:
+            for file in glob.glob('persona/sphinxuser_*'):
+                if file != 'persona/sphinxuser_0000':
+                    os.remove(file)
 
         profiles[profile_name]["persona"]["PID"] = None
         profiles[profile_name]["persona"]["status"] = "not running"
