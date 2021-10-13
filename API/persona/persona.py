@@ -13,10 +13,10 @@ def create_users(number_of_users, variability_amount_list, period_list):
 
     # read the template sphinxuser_0000.json
     try:
-        file = open(os.path.join(sys.path[0], "persona/sphinxuser_0000.json"), "r")
+        file = open(os.path.join(sys.path[0], "persona/template.json"), "r")
 
     except Exception as e:
-        logging.info("Could not open/read file: sphinxuser_0000.json")
+        logging.info("Could not open/read file: template.json")
         return -1
 
     template = json.load(file)
