@@ -1,86 +1,86 @@
 {
   "COMMENTS" : "ATTENTION: to not use an app its sessions must be 0. For asklipios and LIS toggle enabled between true/false",
   "asklipios_LIS": {
-		"enabled": false
+		"enabled": true
 		},
   "persona": {
-    "enabled": true
+    "enabled": false
   },
   "apps" : { 
             "google": {
-                        "total_sessions_duration": 10,
-                        "total_interarrivals_duration": 5,
-                        "sessions": 0
+                        "total_sessions_duration": 100000000,
+                        "total_interarrivals_duration": 1000000,
+                        "sessions": 100
                       },
             "youtube": {
-                        "total_sessions_duration": 10,
-                        "total_interarrivals_duration": 10,
-                        "sessions": 0
+                        "total_sessions_duration": 100000000,
+                        "total_interarrivals_duration": 1000000,
+                        "sessions": 100
                       },
             "facebook": {
-                        "total_sessions_duration": 10,
-                        "total_interarrivals_duration": 10,
-                        "sessions": 0
+                        "total_sessions_duration": 100000000,
+                        "total_interarrivals_duration": 1000000,
+                        "sessions": 100
                       },
             "outlook": {
-                        "total_sessions_duration": 10,
-                        "total_interarrivals_duration": 10,
-                        "sessions": 0
+                        "total_sessions_duration": 100000000,
+                        "total_interarrivals_duration": 1000000,
+                        "sessions": 100
                       },
             "promitheus": {
-                        "total_sessions_duration": 100,
-                        "total_interarrivals_duration": 10,
-                        "sessions": 0
+                        "total_sessions_duration": 100000000,
+                        "total_interarrivals_duration": 1000000,
+                        "sessions": 100
                       },
             "galinos": {
-                        "total_sessions_duration": 100,
-                        "total_interarrivals_duration": 10,
-                        "sessions": 0
+                        "total_sessions_duration": 100000000,
+                        "total_interarrivals_duration": 1000000,
+                        "sessions": 100
                       },
             "apografi_http": {
-                        "total_sessions_duration": 10,
-                        "total_interarrivals_duration": 10,
-                        "sessions": 0
+                        "total_sessions_duration": 100000000,
+                        "total_interarrivals_duration": 1000000,
+                        "sessions": 100
                       },
             "gsis": {
-                        "total_sessions_duration": 10,
-                        "total_interarrivals_duration": 10,
-                        "sessions": 0
+                        "total_sessions_duration": 100000000,
+                        "total_interarrivals_duration": 1000000,
+                        "sessions": 100
                       },
             "idika": {
-                        "total_sessions_duration": 10,
-                        "total_interarrivals_duration": 10,
-                        "sessions": 0
+                        "total_sessions_duration": 100000000,
+                        "total_interarrivals_duration": 1000000,
+                        "sessions": 100
                       },
             "ebaby": {
-                        "total_sessions_duration": 10,
-                        "total_interarrivals_duration": 10,
-                        "sessions": 0
+                        "total_sessions_duration": 100000000,
+                        "total_interarrivals_duration": 1000000,
+                        "sessions": 100
                       },
             "eopyy": {
-                        "total_sessions_duration": 10,
-                        "total_interarrivals_duration": 10,
-                        "sessions": 0
+                        "total_sessions_duration": 100000000,
+                        "total_interarrivals_duration": 1000000,
+                        "sessions": 100
                       },
             "e_prescription": {
-                        "total_sessions_duration": 10,
-                        "total_interarrivals_duration": 10,
-                        "sessions": 0
+                        "total_sessions_duration": 100000000,
+                        "total_interarrivals_duration": 1000000,
+                        "sessions": 100
                       },
             "diavgeia": {
-                        "total_sessions_duration": 10,
-                        "total_interarrivals_duration": 10,
-                        "sessions": 0
+                        "total_sessions_duration": 100000000,
+                        "total_interarrivals_duration": 1000000,
+                        "sessions": 100
                       },
             "e_services": {
-                        "total_sessions_duration": 10,
-                        "total_interarrivals_duration": 10,
-                        "sessions": 0
+                        "total_sessions_duration": 100000000,
+                        "total_interarrivals_duration": 1000000,
+                        "sessions": 100
                       },
             "dypethessaly": {
-                        "total_sessions_duration": 0,
-                        "total_interarrivals_duration": 10,
-                        "sessions": 0
+                        "total_sessions_duration": 100000000,
+                        "total_interarrivals_duration": 100000,
+                        "sessions": 100
                       }
           },
   "total_duration": 3000
