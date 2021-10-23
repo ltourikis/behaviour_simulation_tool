@@ -162,10 +162,10 @@ def google_cookies_fullscreen(driver):
 	try:
 		logging.info("(youtube)Locating Google Cookies screen")
 		i_agree = WebDriverWait(driver, WAIT_TIME).until(
-		EC.presence_of_element_located((By.XPATH, '//tp-yt-paper-button[@aria-label="Agree to the use of cookies and other data for the purposes described"]'))
+		EC.presence_of_all_elements_located((By.XPATH, '//tp-yt-paper-button[@id="button"]'))
 		)
 		logging.info('(youtube)Clicking I Agree button')
-		i_agree.click()
+		i_agree[6].click()
 	except Exception as e:
 		logging.info("(youtube)Error in: google_cookies_fullscreen()")
 		logging.info("(youtube)Error description: " + str(e))
