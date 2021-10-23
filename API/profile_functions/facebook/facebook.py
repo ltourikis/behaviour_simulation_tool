@@ -158,8 +158,9 @@ def accept_cookies(driver):
 	try:
 		logging.info("(facebook)Locating Accept Cookies element")
 		cookiesAcceptButton = WebDriverWait(driver, WAIT_TIME).until(
-		EC.presence_of_element_located((By.XPATH, '//button[@class="_42ft _4jy0 _9o-t _4jy3 _4jy1 selected _51sy"]'))
+		EC.presence_of_element_located((By.XPATH, '//button[@title="Αποδοχή όλων των cookies"]'))
 		)
+		
 		cookiesAcceptButton.click()
 		logging.info("(facebook)Accept Cookies button clicked succesfully")
 	except Exception as e:
