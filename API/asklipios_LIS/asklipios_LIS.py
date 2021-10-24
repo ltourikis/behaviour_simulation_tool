@@ -627,6 +627,8 @@ def asklipios_LIS():
         # Skip LIS if asklipios_only is configured
         if asklipios_only:
             timer_between_next_session(time_between_sessions)
+            driver.quit()
+            time.sleep(3)
             continue
 
         timer_between_asklipios_LIS(time_between_asklipios_LIS)
