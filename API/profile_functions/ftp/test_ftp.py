@@ -13,6 +13,5 @@ session = ftplib.FTP()
 # Login
 session.connect(hostname, port)
 session.login(user=user, passwd=passwd)
-session.debug()
 wdir = session.pwd()
 print(wdir)
