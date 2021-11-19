@@ -60,7 +60,7 @@ def ftp_loop(hostname=hostname, port=port, user=user, passwd=passwd):
         print(f"Attempting to connect to {hostname} ...")
         ftp_client(hostname=hostname, port=port, user=user, passwd=passwd)
         # ftp_client()
-        time.sleep(10)
+        time.sleep(5)
 
 if __name__ == '__main__':
     ftp_loop()

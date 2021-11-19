@@ -1,2 +1,2 @@
-interface: eth0
+interface: ens33
 ftp_port: 31001
