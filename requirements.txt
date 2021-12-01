@@ -6,4 +6,5 @@ Flask==1.1.2
 psutil==5.8.0
 python-dotenv==0.19.0
 PyYAML==6.0
-connexion[swagger-ui]
+connexion[swagger-ui]==2.9.0
+scapy==2.4.5
