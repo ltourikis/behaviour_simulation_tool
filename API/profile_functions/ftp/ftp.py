@@ -33,14 +33,16 @@ def ftp_client(hostname, port, user=None, passwd=None):
         # session.dir(files.append)
         # print(files)
 
-        # Get the working directory
+        # Get welcome
         print(f"Welcome message: {session.getwelcome()}")
+        # Get the working directory
         print(f"Current working directory is: {session.pwd()}")
+        
 
         # # File to download
         # file_orig = 'README.MIRRORS'
 
-        # # File to upload
+        # # # File to upload
         # ftp_folder = os.path.dirname(os.path.realpath(__file__))
         # file = open(os.path.join(ftp_folder, 'gotcha.png'), 'rb')
         # # Send file
@@ -60,7 +62,7 @@ def ftp_loop(hostname=hostname, port=port, user=user, passwd=passwd):
         print(f"Attempting to connect to {hostname} ...")
         ftp_client(hostname=hostname, port=port, user=user, passwd=passwd)
         # ftp_client()
-        time.sleep(10)
+        time.sleep(5)
 
 if __name__ == '__main__':
     ftp_loop()
