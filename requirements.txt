@@ -3,6 +3,8 @@ connexion==2.7.0
 selenium==3.141.0
 numpy==1.18.5
 Flask==1.1.2
-psutil
+psutil==5.8.0
 python-dotenv==0.19.0
-connexion[swagger-ui]
+PyYAML==6.0
+connexion[swagger-ui]==2.9.0
+scapy==2.4.5

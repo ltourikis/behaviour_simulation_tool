@@ -1,0 +1,6 @@
+server:
+  hostname: 10.10.2.60
+  port: 31001
+client: 
+  user: edge
+  passwd: edge
