@@ -20,3 +20,5 @@
 	- On a windows pc run: ``python API/server.py``
 	   		 
 	- On a linux distro run: ``python3 API/server.py``
+8. To initiate profiles visit:
+```http://localhost:5000/api/ui```
