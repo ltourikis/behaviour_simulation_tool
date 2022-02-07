@@ -43,12 +43,12 @@ def ftp_client(hostname, port, user=None, passwd=None):
         # file_orig = 'README.MIRRORS'
 
         # # # File to upload
-        # ftp_folder = os.path.dirname(os.path.realpath(__file__))
-        # file = open(os.path.join(ftp_folder, 'gotcha.png'), 'rb')
-        # # Send file
-        # print('Uploading file...\n')
-        # session.storbinary('STOR gotcha.png', file, 1024)     
-        # file.close()                                 
+        ftp_folder = os.path.dirname(os.path.realpath(__file__))
+        file = open(os.path.join(ftp_folder, 'gotcha.png'), 'rb')
+        # Send file
+        print('Uploading file...\n')
+        session.storbinary('STOR gotcha.png', file)     
+        file.close()                                 
 
         # close session
         print('Quiting FTP session...\n')
