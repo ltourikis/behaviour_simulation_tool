@@ -1,5 +1,5 @@
 import ftplib
-hostname = '10.10.2.60'
+hostname = '10.10.2.62'
 port = 31001
 user = 'edge'
 passwd = 'edge'
