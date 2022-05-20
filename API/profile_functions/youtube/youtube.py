@@ -160,16 +160,18 @@ def google_cookies_fullscreen(driver):
     	:return:	-1:			If any errors occurs
 	"""
 	try:
-# 		logging.info("(youtube)Locating Google Cookies screen")
-# 		i_agree = WebDriverWait(driver, WAIT_TIME).until(
-# 		EC.presence_of_all_elements_located((By.XPATH, '//tp-yt-paper-button[@id="button"]'))
-# 		)
-# 		logging.info('(youtube)Clicking I Agree button')
-# 		i_agree[6].click()
+		# Old code restored
+		logging.info("(youtube)Locating Google Cookies screen")
 		i_agree = WebDriverWait(driver, WAIT_TIME).until(
-		EC.presence_of_element_located((By.XPATH, "//span[contains(text(),'Αποδοχή όλων')]"))
+		EC.presence_of_all_elements_located((By.XPATH, '//tp-yt-paper-button[@id="button"]'))
 		)
-		i_agree.click()
+		logging.info('(youtube)Clicking I Agree button')
+		i_agree[6].click()
+		# Attempt for new cookies page: failed! 
+# 		i_agree = WebDriverWait(driver, WAIT_TIME).until(
+# 		EC.presence_of_element_located((By.XPATH, "//span[contains(text(),'Αποδοχή όλων')]"))
+# 		)
+# 		i_agree.click()
 	except Exception as e:
 		logging.info("(youtube)Error in: google_cookies_fullscreen()")
 		logging.info("(youtube)Error description: " + str(e))
@@ -302,20 +304,20 @@ def youtube(duration_list, interarrivals_list, url):
 			driver = webdriver.Chrome()
 			logging.info("Operating System Windows detected")
 			logging.info("Using Chrome as browser")
-# 		driver.get("https://www.youtube.com/")
+		driver.get("https://www.youtube.com/")
 
-# 		google_cookies_fullscreen(driver)
+		google_cookies_fullscreen(driver)
 
-# 		# Wait 1 - 4 secs inbetween actions to make the simulation more realistic
-# 		s1 = realistic_sleep_timer_inbetween_actions()
+		# Wait 1 - 4 secs inbetween actions to make the simulation more realistic
+		s1 = realistic_sleep_timer_inbetween_actions()
 
-# 		s2 = youtube_sign_in(driver, email, password)
+		s2 = youtube_sign_in(driver, email, password)
 
-# 		duration = duration - s1 - s2
+		duration = duration - s1 - s2
 		
-# 		# Start watching videos. 
-# 		logging.info("(youtube)Mode: Browsing on random trending video")
-# 		logging.info(f"(youtube) About to watch videos for {duration:.2f} seconds")
+		# Start watching videos. 
+		logging.info("(youtube)Mode: Browsing on random trending video")
+		logging.info(f"(youtube) About to watch videos for {duration:.2f} seconds")
 
 		while duration > 0:
 			driver.get('https://www.youtube.com/feed/trending')
