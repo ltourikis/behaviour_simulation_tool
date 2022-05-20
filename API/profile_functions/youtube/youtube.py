@@ -302,20 +302,20 @@ def youtube(duration_list, interarrivals_list, url):
 			driver = webdriver.Chrome()
 			logging.info("Operating System Windows detected")
 			logging.info("Using Chrome as browser")
-		driver.get("https://www.youtube.com/")
+# 		driver.get("https://www.youtube.com/")
 
-		google_cookies_fullscreen(driver)
+# 		google_cookies_fullscreen(driver)
 
-		# Wait 1 - 4 secs inbetween actions to make the simulation more realistic
-		s1 = realistic_sleep_timer_inbetween_actions()
+# 		# Wait 1 - 4 secs inbetween actions to make the simulation more realistic
+# 		s1 = realistic_sleep_timer_inbetween_actions()
 
-		s2 = youtube_sign_in(driver, email, password)
+# 		s2 = youtube_sign_in(driver, email, password)
 
-		duration = duration - s1 - s2
+# 		duration = duration - s1 - s2
 		
-		# Start watching videos. 
-		logging.info("(youtube)Mode: Browsing on random trending video")
-		logging.info(f"(youtube) About to watch videos for {duration:.2f} seconds")
+# 		# Start watching videos. 
+# 		logging.info("(youtube)Mode: Browsing on random trending video")
+# 		logging.info(f"(youtube) About to watch videos for {duration:.2f} seconds")
 
 		while duration > 0:
 			driver.get('https://www.youtube.com/feed/trending')
