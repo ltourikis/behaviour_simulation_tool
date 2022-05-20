@@ -1,7 +1,7 @@
 {
 	"LIS": "http://10.10.2.118:9999/",
 	"asklipios": "http://10.10.2.103:51001/",
-	"asklipios_only": true,
+	"asklipios_only": false,
 	"time_between_sessions": 10,
 	"time_between_asklipios_LIS": 10,
 	"epigon_probability": 0.5,
