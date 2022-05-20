@@ -160,12 +160,16 @@ def google_cookies_fullscreen(driver):
     	:return:	-1:			If any errors occurs
 	"""
 	try:
-		logging.info("(youtube)Locating Google Cookies screen")
+# 		logging.info("(youtube)Locating Google Cookies screen")
+# 		i_agree = WebDriverWait(driver, WAIT_TIME).until(
+# 		EC.presence_of_all_elements_located((By.XPATH, '//tp-yt-paper-button[@id="button"]'))
+# 		)
+# 		logging.info('(youtube)Clicking I Agree button')
+# 		i_agree[6].click()
 		i_agree = WebDriverWait(driver, WAIT_TIME).until(
-		EC.presence_of_all_elements_located((By.XPATH, '//tp-yt-paper-button[@id="button"]'))
+		EC.presence_of_element_located((By.XPATH, "//span[contains(text(),'Αποδοχή όλων')]"))
 		)
-		logging.info('(youtube)Clicking I Agree button')
-		i_agree[6].click()
+		i_agree.click()
 	except Exception as e:
 		logging.info("(youtube)Error in: google_cookies_fullscreen()")
 		logging.info("(youtube)Error description: " + str(e))
